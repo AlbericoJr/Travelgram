@@ -1,26 +1,27 @@
-header{
+header {
   padding-block: 32px;
 
   font: var(--text-md);
 }
 
-header .container{
+header .container {
   display: flex;
+  gap: 32px;
 
   justify-content: space-between;
   align-items: center;
 }
 
-#profile{
+#profile {
   display: flex;
   gap: 32px;
 }
 
-#profile > div{
+#profile>div {
   max-width: 384px;
 }
 
-#profile img{
+#profile img {
   width: 176px;
   height: 176px;
   object-fit: cover;
@@ -33,7 +34,7 @@ header .container{
   margin-bottom: 8px;
 }
 
-#info{
+#info {
   list-style: none;
 
   display: flex;
@@ -43,8 +44,43 @@ header .container{
   width: 280px;
 }
 
-#info li{
+#info li {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+@media (max-width: 720px) {
+  header .container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #info {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding-block: 24px;
+  }
+
+  #profile {
+    align-items: center;
+    gap: 16px;
+  }
+
+  #profile img {
+    width: 88px;
+    height: 88px;
+    flex: 0 0 auto;
+  }
+
+  #profile h1 {
+    font-size: 24px;
+  }
 }

@@ -1,4 +1,4 @@
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,7 +6,7 @@ nav{
   padding-block: 20px;
 }
 
-nav ul{
+nav ul {
   list-style: none;
   display: flex;
   align-items: center;
@@ -16,7 +16,22 @@ nav ul{
   padding-block: 8px;
 }
 
-nav ul li:last-child img{
+@media (max-width: 600px) {
+  nav {
+    padding-block: 16px;
+  }
+
+  nav ul {
+    gap: 16px;
+  }
+
+  nav ul li:nth-child(2),
+  nav ul li:nth-child(3) {
+    display: none;
+  }
+}
+
+nav ul li:last-child img {
   width: 40px;
   height: 40px;
 }

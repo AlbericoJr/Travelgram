@@ -1,11 +1,24 @@
-footer{
+footer {
   display: flex;
+  flex-wrap: wrap;
   padding-block: 24px;
   gap: 24px;
 
   font: 14px/150% var(--font-family);
 }
 
-footer span:nth-child(1){
+footer span:nth-child(1) {
   margin-right: auto;
+}
+
+@media (max-width: 480px) {
+  footer {
+    gap: 8px 16px;
+    justify-content: space-between;
+  }
+
+  footer span:nth-child(1) {
+    width: 100%;
+    margin-right: 0;
+  }
 }
